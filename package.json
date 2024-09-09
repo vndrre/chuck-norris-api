@@ -1,0 +1,26 @@
+{
+  "name": "chuck-norris-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vndrre/chuck-norris-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vndrre/chuck-norris-api/issues"
+  },
+  "homepage": "https://github.com/vndrre/chuck-norris-api#readme",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "vite": "^5.4.3"
+  }
+}

@@ -1,6 +1,10 @@
+import chuckNorrisApi from "./api/chuckNorrisApi"
+
 const randomJokeHtmlElement = document.querySelector('.random-joke')
 const selectHtmlELement = document.querySelector('#categories')
 const buttonElement = document.querySelector('.generate-joke-button')
+const searchElement = document.querySelector('#search')
+const searchResults = document.querySelector('.search-results')
 
 const base_url="https://api.chucknorris.io/jokes"
 let selectedCategories = null
@@ -8,7 +12,7 @@ let selectedCategories = null
 
 const fetchRandomJokes = async (category = '') => {
     try {
-        const response = await fetch(`${base_url}/random?categpry=${category}`)
+        const response = await chuckNorrisApi.get(`${base_url}/random?categpry=${category}`)
         const data = await response.json()
         return data
     } catch (error) {
@@ -24,9 +28,8 @@ const displayRandomJokes = async () => {
 
 const fetchCategories = async () => {
     try {
-        const response = await fetch(`${base_url}/categories`)
-        const data = await response.json()
-        return data
+        const response = await axios.get(`${base_url}/categories`)
+        return response.data
     } catch (error) {
         throw new Error('Something went wrong :(')
     }
@@ -55,7 +58,7 @@ buttonElement.addEventListener('click', async (event) => {
     randomJokeHtmlElement.textContent = response.value
 })
 
-
+displayRandomJokes()
 fetchRandomJokes()
 fetchCategories()
 fillSelectWithOptions()
