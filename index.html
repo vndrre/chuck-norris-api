@@ -6,18 +6,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="search-section">
-        <label for="search" class="search-label">Otsi nalju</label>
-        <input type="search" id="search">
-        
+<body> 
+    <section class="search-section">
+        <label for="search">Search for Chuck Norris jokes</label>
+        <input type="search" id="search" placeholder="search">
+        <span class="result-count"></span>
         <div class="search-results"></div>
-    </div>
-    
-    <div class="joke-section">
-        <select name="categories" id="categories"></select>
-        <button class="generate-joke-button">Genereeri</button>
-        <h4 class="random-joke"></h4>
+    </section>
+ 
+    <div class="wrapper">
+        <label for="categories" class="category-label">by category</label>
+        <select name="categories" id="categories">
+            <option value="" disabled selected>select category</option>
+        </select>
+        <button class="generate-joke-button">Generate joke</button>
+        <h4 class="random-jokes"></h4>
     </div>
     <script src="app.js" type="module"></script>
 </body>

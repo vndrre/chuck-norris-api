@@ -1,27 +1,24 @@
-
+body {
+    background-color: antiquewhite;
+    padding-top: 100px;
+    font-family: sa;
+}
 
 .search-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.search-label {
-    display: flex;
-    justify-content: center;
-    font-size: 35px;
-}
-
-.joke-section {
-    display: flex;
-    justify-content: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-left: 500px;
+    margin-right: 500px;
 }
 
-.random-joke {
-    display: block;
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 

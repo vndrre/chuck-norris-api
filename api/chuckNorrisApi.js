@@ -1,5 +1,7 @@
-import axios from "axios"
+import axios from 'axios'
 
-axios.create
+const chuckNorrisAPI = axios.create({
+    baseURL: 'https://api.chucknorris.io/jokes'
+})
 
-export default chuckNorrisApi
+export default chuckNorrisAPI 
